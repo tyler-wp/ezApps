@@ -1,0 +1,7 @@
+Options -Indexes +FollowSymLinks -MultiViews
+
+RewriteEngine On
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [NC,L] 
